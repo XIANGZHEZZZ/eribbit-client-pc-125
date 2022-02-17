@@ -1,20 +1,7 @@
-import { createStore } from 'vuex'
+1 安装 npm i vuex-persistedstate
+2 在 store index.js 导入
 import createPersistedState from 'vuex-persistedstate'
-
-import user from './modules/user'
-import category from './modules/category'
-export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-    user,
-    category
-  },
-  // 配置插件
+3 // 配置插件
   plugins: [
     // 默认存储在localStorage
     createPersistedState({
@@ -24,4 +11,3 @@ export default createStore({
       paths: ['user', 'cart']
     })
   ]
-})

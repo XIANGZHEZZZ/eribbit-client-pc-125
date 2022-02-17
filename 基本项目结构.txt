@@ -1,0 +1,22 @@
+src 源码
+  api 接口函数
+  asstes 资源管理
+   images 图片
+   styles less预处理器脚本
+  components 全局组件, 公用组件
+  router 路由 vue-router 
+  store 状态管理 vuex 
+  utils 工具模块 
+  vender 第三方js库
+  views 路由级别视图
+    brand 品牌
+    category 分类
+    goods 商品
+    home 首页
+    member 会员中心
+      pay 结算支付
+      home 个人中心首页
+      order 订单管理
+    search 搜索
+  App.vue 跟组件
+  main.js 入口文件

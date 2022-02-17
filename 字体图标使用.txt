@@ -1,0 +1,14 @@
+阿里图标库 
+账号 18516373157
+密码 xz3662634
+
+资源管理 我的项目 添加项目加入字体图标 
+
+在 src/assets/styles/icon.less 创建 
+点击 font class 生成代码 复制到 icon.less 中
+在main.js 中导入
+ // 字体图标
+import '@/assets/styles/icon.less'
+
+使用
+<i class="iconfont icon-shouji"></i>

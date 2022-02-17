@@ -1,0 +1,72 @@
+Microsoft Windows [版本 10.0.19042.1052]
+(c) Microsoft Corporation。保留所有权利。
+
+C:\Users\董林娟>cd C:\项哲文件\项目开发\eribbit-client-pc-125
+
+C:\项哲文件\项目开发\eribbit-client-pc-125>vue add style-resources-loader
+ WARN  There are uncommitted changes in the current repository, it's recommended to commit or stash them first.
+? Still proceed? Yes
+
+📦  Installing vue-cli-plugin-style-resources-loader...
+
+
+added 1 package, and audited 1508 packages in 14s
+
+102 packages are looking for funding
+  run `npm fund` for details
+
+76 vulnerabilities (65 moderate, 11 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+✔  Successfully installed plugin: vue-cli-plugin-style-resources-loader
+
+? CSS Pre-processor? Less
+
+🚀  Invoking generator for vue-cli-plugin-style-resources-loader...
+📦  Installing additional dependencies...
+
+
+added 3 packages, and audited 1511 packages in 4s
+
+102 packages are looking for funding
+  run `npm fund` for details
+
+76 vulnerabilities (65 moderate, 11 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+⚓  Running completion hooks...
+
+✔  Successfully invoked generator for plugin: vue-cli-plugin-style-resources-loader
+ DONE  style-resources-loader  One more step, add patterns for your resources's files in vue.config.js
+
+
+C:\项哲文件\项目开发\eribbit-client-pc-125>
+
+项目出现 vue.config.js  安装成功
+
+const path = require('path')
+module.exports = {
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      // 哪些文件自动引入，使用绝对路劲
+      // 需要path.josn来拼接完整路劲
+      patterns: [
+        path.join(__dirname, './src/assets/variables.less'),
+        path.join(__dirname, './src/assets/mixins.less')
+      ]
+    }
+  }
+}

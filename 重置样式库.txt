@@ -1,0 +1,6 @@
+npm i normalize.css 
+main.js 导入
+// 重置样式的库
+import 'normalize.css'
+// 自己项目的重置样式和公用样式
+import '@/assets/styles/common.less'
