@@ -10,5 +10,14 @@ module.exports = {
         path.join(__dirname, './src/assets/styles/mixins.less')
       ]
     }
+  },
+  chainWebpack: config => {
+    // 开启IP域名访问
+    config.devServer.disableHostCheck(true)
+  },
+  configureWebpack: {
+    externals: {
+      qc: 'QC'
+    }
   }
 }

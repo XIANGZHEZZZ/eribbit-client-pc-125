@@ -16,6 +16,7 @@ const instance = axios.create({
 })
 
 instance.interceptors.request.use(config => {
+  // console.log(config) 给每一个请求添加token请求头
   // 拦截业务逻辑
   // 进行请求配置的修改
   // 如果本地又token就在头部携带

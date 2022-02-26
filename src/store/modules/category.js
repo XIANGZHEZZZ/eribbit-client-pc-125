@@ -33,7 +33,6 @@ export default {
       data.result.forEach(top => {
         top.open = false
       })
-      console.log(data)
       // 修改分类数据
       commit('setList', data.result)
     }

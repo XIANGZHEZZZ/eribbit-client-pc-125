@@ -6,20 +6,21 @@
           <li>
           <a href="javascript:;">
             <i class="iconfont icon-denglu-copy"></i>
-            {{profile.accout}}
+            {{profile.account}}
+            <!-- {{profile.id}} -->
           </a>
         </li>
         <li>
-          <a href="javascript:;">
+          <a href="javascript:;" @click="logout()">
             退出登录
           </a>
         </li>
         </template>
         <template v-else>
         <li>
-          <a href="javascript:;">
+          <router-link to="/login">
             请先登录
-          </a>
+          </router-link>
         </li>
         <li>
           <a href="javascript:;">
@@ -45,6 +46,7 @@
 <script>
 import { computed } from 'vue'
 import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
 export default {
   name: 'AppNavbar',
   setup () {
@@ -55,7 +57,16 @@ export default {
     const profile = computed(() => {
       return store.state.user.profile
     })
-    return { profile }
+    // 退出登录
+    // 1. 清空本地存储信息和vuex的用户信息
+    // 2. 跳转登录
+    // const router = useRoute()
+    const router = useRouter()
+    const logout = () => {
+      store.commit('user/setUser', {})
+      router.push('/login')
+    }
+    return { profile, logout }
   }
 }
 </script>
